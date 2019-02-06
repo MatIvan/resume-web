@@ -1,0 +1,297 @@
+* {
+	padding: 0;
+	margin: 0;
+	font-size: 100%;
+	font-family: Arial, sans-serif;
+}
+
+body {
+  max-width: 1024px;
+  min-width: 360px;
+  margin: auto;
+}
+
+header{
+	border: 2px dotted #aaaaaa;
+  text-align: center;
+  margin-top: 40px;
+}
+
+
+/********************************************************************
+*	Блоки статей с заголовком и параграфами 
+*/
+article {
+	padding: 20px 10px 20px 40px;
+}
+
+article p {
+	text-align: justify;
+	text-indent: 30px;
+	font-size: 1em;
+	padding: 10px 2px 0 2px;
+}
+
+.article-title {
+    overflow: hidden;
+    text-align: center;
+    font-size: 1.3em;
+    padding-bottom: 20px;
+}
+.article-title span {
+    display: inline-block;
+    vertical-align: middle;
+}
+.article-title:before,
+.article-title:after {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    width: 100%;
+    height: 2px;
+    background-color: #aaaaaa;
+    position: relative;
+}
+.article-title:before {
+    margin-left: -100%;
+    left: -10px;
+}
+.article-title:after {
+    margin-right: -100%;
+    right: -10px;
+}
+
+
+/*********************************************************************
+*	Раздел в шапке Info
+*/
+.contacts {
+  width: 360px;
+  float: left;
+  margin: 40px 0 0 20px;
+}
+
+.contacts h1 {
+	font-size: 1.5em;
+}
+
+.contacts table {
+  padding-top: 20px;
+}
+
+.contacts table td,
+.contacts table th{
+	font-size: 0.9em;
+	padding-top: 3px;
+	text-align: left;
+	font-weight: normal;
+}
+
+.contacts table th{
+	font-style: italic;
+	font-size: 0.7em;
+	padding-right: 15px;
+}
+
+.face {
+	width: 200px;
+	height: 200px;
+}
+
+
+/*********************************************************************
+*  Статья "О себе"
+*/
+#aboutme {
+	float: right;
+  width: 360px;
+  margin: 60px 20px 0 0; 
+}
+
+
+/*********************************************************************
+*  Footer
+*/
+footer {
+  border: 2px dotted #aaaaaa;
+  font-size: 0.8em;
+  padding: 15px 15px 15px 25px;
+  align-content: center;
+  mx-width: 1024px;
+}
+
+footer ul{
+  list-style: none;
+  width: 100%;
+	position: relative;
+	display: table;
+}
+
+footer li {
+	display: table-cell;
+	position: relative;
+}
+
+#copyrigth{
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+footer hr {
+  width: 100px;
+  height: 2px;
+  background-color: #aaaaaa;
+}
+
+
+
+/*********************************************************************
+*  NavBar Главное меню
+*/
+nav {
+  border-right: 2px dotted #aaaaaa;
+  border-left:  2px dotted #aaaaaa;
+  border-bottom:2px dotted #aaaaaa; 
+  text-align: center;
+  padding: 20px 40px 10px 40px;
+}
+
+nav ul{
+  list-style: none;
+  width: 100%;
+	position: relative;
+	display: table;
+}
+
+nav li {
+	display: table-cell;
+	position: relative;
+  font-size: 1.2em;
+  font-weight: 600;
+  border-left: 2px solid #aaaaaa;
+}
+
+nav li:first-child {
+  border-left: 0px solid #aaaaaa;
+}
+
+nav a{
+  color: black;
+  text-decoration: none;
+}
+
+nav a:hover{
+  text-decoration: underline;
+}
+
+
+/*********************************************************************
+*  navleft Меню слева
+*/
+.navleft {
+  float: left;
+  text-align: left;
+  padding: 50px 40px 10px 40px;
+  width: 40%;
+}
+
+.navleft h2{
+  font-size: 1.6em;
+  padding-bottom: 20px;
+  font-weight: bold;
+}
+
+.navleft ul{
+  font-size: 1.2em;
+  list-style: none;
+}
+
+.navleft li {
+  font-size: 1em;
+  padding: 5px 5px 5px 30px;
+}
+
+.navleft a{
+  color: black;
+  text-decoration: none;
+}
+
+.navleft a:hover{
+  text-decoration: underline;
+}
+
+/* *******************************************************************
+*  Выбранный пунк меню
+   class="checkedlink"
+*/
+a.checkedlink {
+  color: #de0e0e;
+  text-decoration: underline;
+}
+
+/* *******************************************************************
+* Сектор с данными страницы
+*/
+main{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-right: 2px dotted #aaaaaa;
+  border-left:  2px dotted #aaaaaa;
+  padding-top: 30px;
+}
+
+section.content {
+  text-align: justify;
+  background: #fafafa; 
+  margin-right: 20px;
+}
+
+article ul {
+  padding: 20px;
+  
+}
+article li {
+  padding: 10px;
+  
+}
+
+/* ********************************************************************
+*  Если размер окна от 380 до 946 
+*/
+@media screen and (min-width:380px) and (max-width:966px) {
+  #aboutme {
+    width: 97%;
+    margin: 10px; 
+  }
+  footer li {
+	  display: table-row;
+    position: relative;
+  }
+  nav li{
+	  display: table-row;
+    position: relative;
+  }
+}
+
+/* ********************************************************************
+*  Если размер окна меннее 379 
+*/
+@media screen and (max-width:379px) {
+  /* Target portrait smartphones */
+  #aboutme {
+    width: 80%;
+    margin: 10px; 
+  }
+  footer li {
+	  display: table-row;
+    position: relative;
+  }
+  nav li{
+	  position: relative;
+	  display: table-row;
+  }
+  main{
+  flex-direction:column;
+}
+}
